@@ -6,26 +6,22 @@ using System.Threading.Tasks;
 
 namespace FarmacieConsola
 {
-
-    class Client
+    class Angajat
     {
         public int ID { get; set; }
         public string Nume { get; set; }
-        public int Varsta { get; set; }
-        public string Adresa { get; set; }
+        public string Functie { get; set; }
 
-
-        public Client(int id, string nume, int varsta, string adresa)
+        public Angajat(int id, string nume, string functie)
         {
             ID = id;
             Nume = nume;
-            Varsta = varsta;
-            Adresa = adresa;
+            Functie = functie;
         }
 
         public override string ToString()
         {
-            return $"ID: {ID}, Nume: {Nume}, Varsta: {Varsta}, Adresa: {Adresa}";
+            return $"ID: {ID}, Nume: {Nume}, Functie: {Functie}";
         }
     }
 }

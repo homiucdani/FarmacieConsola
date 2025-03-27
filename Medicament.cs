@@ -6,28 +6,25 @@ using System.Threading.Tasks;
 
 namespace FarmacieConsola
 {
-    class Medicament
+    public abstract class Medicament
     {
-
-        public int ID { get; set; }
+        public string Tip => this.GetType().Name;
         public string Nume { get; set; }
         public string Producator { get; set; }
-        public double Pret  { get; set; }
+        public double Pret { get; set; }
         public int Cantitate { get; set; }
 
-        public Medicament(int id, string nume, string producator, double pret, int cantitate)
+        protected Medicament(string nume, string producator, double pret, int cantitate)
         {
-            ID = id;
             Nume = nume;
             Producator = producator;
             Pret = pret;
             Cantitate = cantitate;
         }
 
-        public override string ToString()
-        {
-            return $"ID: {ID}, Nume: {Nume}, Producator: {Producator}, Pret: {Pret} LEI, Cantitate: {Cantitate}";
-        }
+        public override string ToString() =>
+    $"Tip: {Tip}, Nume: {Nume}, Producător: {Producator}, Preț: {Pret} LEI, Cantitate: {Cantitate} buc";
 
+        public string ToFileFormat() => $"{Tip},{Nume},{Producator},{Pret},{Cantitate}";
     }
 }

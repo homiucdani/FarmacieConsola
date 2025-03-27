@@ -43,12 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Angajat.cs" />
-    <Compile Include="Client.cs" />
+    <Compile Include="Capsula.cs" />
+    <Compile Include="Injectie.cs" />
     <Compile Include="Medicament.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tranzactie.cs" />
+    <Compile Include="Sirop.cs" />
+    <Compile Include="TipMedicament.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
